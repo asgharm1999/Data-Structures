@@ -4,8 +4,12 @@ public class StackIntLL {
 	
 	Node top = null;
 	
-	public void push(int x) {
-		top = new Node(x, top);
+	public void push(int i) {
+		top = new Node(i, top);
+	}
+	
+	public void push(String s) {
+		top = new Node(s, top);
 	}
 	
 	public void pop() {
@@ -19,5 +23,4 @@ public class StackIntLL {
 	public boolean isEmpty() {
 		return top == null;
 	}
-	
 }

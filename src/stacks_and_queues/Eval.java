@@ -26,7 +26,7 @@ public class Eval {
 	
 	public static String infix2Postfix(String[] splitInfix) {
 		StackChar stack = new StackChar(splitInfix.length);
-		String postfix ="";		// must be empty, no space
+		String postfix = "";		// must be empty, no space
 		
 		for(int i = 0; i < splitInfix.length - 1; i++) {
 			String s = splitInfix[i];
@@ -74,7 +74,7 @@ public class Eval {
 				if(s == "-") stack.push(a - b);
 				
 			} else {
-				stack.push(s - "0");
+				stack.push(s);
 			}
 		}
 		return stack.top();
